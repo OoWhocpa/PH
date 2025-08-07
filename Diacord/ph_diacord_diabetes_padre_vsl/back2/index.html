@@ -1,0 +1,737 @@
+<?php
+// Отримуємо значення clickid з URL
+$clickid = $_GET['clickid'] ?? '';
+
+// Встановлюємо параметр binom_click_id в значення clickid
+$action = "../../route.php?binom_click_id=" . urlencode($clickid);
+?>
+<!DOCTYPE html>
+<html lang="ph">
+
+<head>
+  <script src="./js/jQuery.js"></script>
+
+  <meta charset="utf-8" />
+
+  <title>Lumalaban sa altapresyon at nagpapahaba ng buhay
+
+    Ibinabalik ang elastisidad ng mga daluyan ng dugo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <!-- Favicon -->
+  <link sizes="16x16" rel="shortcut icon" type="image/png" href="images/favicon-16x16.png" />
+  <link sizes="32x32" rel="icon" type="image/png" href="images/favicon-32x32.png" />
+  <link sizes="192x192" rel="icon" type="image/png" href="images/android-chrome-192x192.png" />
+  <link sizes="180x180" rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png" />
+
+  <!-- Кто принимал участие над разработкой данного сайта -->
+
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body class="page">
+  <section class="section section_face">
+    <div class="container">
+      <div class="face">
+        <div class="face__logo">
+          DIACORD
+        </div>
+        <div class="face__body">
+          <div class="face__box face__box_first">
+            <div class="section__title face__title lt0">
+              Lumalaban sa altapresyon at nagpapahaba ng buhay
+
+              Ibinabalik ang elastisidad ng mga daluyan ng dugo
+            </div>
+            <div class="face__list">
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt1">Ibinabalik ang elastisidad ng mga daluyan ng dugo</p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt2">Pinapababa ang antas ng stress hormone</p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt3">Pinipigilan ang mga atake sa puso at stroke</p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt4">Nililinis ang mga dingding ng daluyan ng dugo mula sa kolesterol</p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt5">
+                  Hindi nagdudulot ng biglaang pagbabago sa presyon ng dugo
+
+                </p>
+              </div>
+            </div>
+            <div class="face__product">
+              <img alt="" src="images/product.png" />
+            </div>
+          </div>
+          <div class="face__box">
+            <img alt="" class="product" src="images/product.png" />
+            <form class="form order_form" method="POST" action="<?php echo $action; ?>">
+              <input type="hidden" name="subid5" value="back_vsl_form">
+              <input type="hidden" name="click_id" value="<?php echo $clickid; ?>" />
+              <div class="form__title lt6">Mag-order ng Diacord ngayon</div>
+              <div class="form__price">
+                <div class="form__price-old lt7 price_old">
+                  <x-oldprice> 3980 ₱</x-oldprice>
+                </div>
+                <div class="form__price-new lt8 price_main">
+                  <x-newprice>1990 ₱</x-newprice>
+                </div>
+              </div>
+              <div class="form__body">
+                <label class="form__label"><input class="form__field" type="text" name="name" minlength="2"
+                    required /><span class="lt10">Pangalan</span></label><label class="form__label"><input
+                    class="form__field" type="tel" name="phone" minlength="8" maxlength="16" required /><span
+                    class="lt10">Numero ng telepono</span></label>
+              </div>
+              <div class="form__time">
+                <div class="form__time-title lt12">Hanggang sa pagtatapos ng promo:</div>
+                <div class="form__time-box">
+                  <div class="form__time-count">
+                    <span>1</span><span class="lt13">oras</span>
+                  </div>
+                  <span class="lt14">:</span>
+                  <div class="form__time-count">
+                    <span>00</span><span class="lt15">minuto</span>
+                  </div>
+                  <span class="lt16">:</span>
+                  <div class="form__time-count">
+                    <span>00</span><span class="lt17">segundo</span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="form__btn lt18">
+                Umorder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_causes">
+    <div class="container">
+      <div class="causes">
+        <div class="causes__head">
+          <div class="causes__head-title lt19">
+            Ang altapresyon ay isa sa mga pangunahing salik ng panganib sa pagkamatay mula sa mga sakit sa
+            cardiovascular system.</span>
+          </div>
+          <div class="causes__head-description lt20">
+            Mahigit sa isang bilyong tao sa buong mundo ang apektado ng sakit na ito. Taun-taon, ang altapresyon ay
+            nagiging sanhi
+            ng pagkamatay ng 10 milyong tao. Tinatawag ito ng mga doktor na isang nakamamatay na epidemya.
+          </div>
+        </div>
+        <div class="causes__body">
+          <div class="causes__media">
+            <img alt="" src="images/heart.jpg" />
+          </div>
+          <div class="causes__box">
+            <div class="section__title causes__title lt21">
+              Mga sanhi ng altapresyon
+            </div>
+            <div class="causes__list">
+              <div class="causes__item">
+                <span></span>
+                <p class="lt22">Edad na higit sa 35 taon</p>
+              </div>
+              <div class="causes__item">
+                <span></span>
+                <p class="lt23">Mataas na antas ng kolesterol</p>
+              </div>
+              <div class="causes__item">
+                <span></span>
+                <p class="lt24">Namamana</p>
+              </div>
+              <div class="causes__item">
+                <span></span>
+                <p class="lt25">Paninigarilyo</p>
+              </div>
+              <div class="causes__item">
+                <span></span>
+                <p class="lt26">Sobrang timbang</p>
+              </div>
+              <div class="causes__item">
+                <span></span>
+                <p class="lt27">Diabetes</p>
+              </div>
+              <div class="causes__item">
+                <span></span>
+                <p class="lt28">Palaupo na pamumuhay</p>
+              </div>
+            </div>
+            <div class="causes__footer lt29">
+              Dapat tandaan na ang altapresyon ay isang "tahimik na mamamatay." Wala itong malinaw na mga sintomas,
+              ngunit sinisira
+              nito ang lahat ng mahahalagang organo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_cards">
+    <div class="container container_fluid">
+      <div class="cards">
+        <div class="section__title cards__title lt30">Mga target na organo</div>
+        <div class="cards__box">
+          <div class="cards__item">
+            <div class="cards__name lt31">Utak</div>
+            <ul>
+              <li class="lt32">Pagkabahala sa sirkulasyon ng dugo</li>
+              <li class="lt33">Pagkawala ng memorya at katalinuhan</li>
+              <li class="lt34">Stroke</li>
+            </ul>
+          </div>
+          <div class="cards__item">
+            <div class="cards__name lt35">Puso</div>
+            <ul>
+              <li class="lt36">Angina</li>
+              <li class="lt37">Cardiomyopathy</li>
+            </ul>
+          </div>
+          <div class="cards__item">
+            <div class="cards__name lt38">Mata</div>
+            <ul>
+              <li class="lt39">Pagkakalaglag ng retina</li>
+              <li class="lt39">Cardiomyopathy</li>
+              <li class="lt39">Atake sa puso (myocardial infarction)</li>
+
+            </ul>
+          </div>
+          <div class="cards__item">
+            <div class="cards__name lt42">Mga Bato (Kidneys)</div>
+            <ul>
+              <li class="lt43">Nephrosclerosis</li>
+              <li class="lt44">Pagkabigo ng bato (renal failure)</li>
+              <li class="lt45">Pangangailangan para sa hemodialysis</li>
+            </ul>
+          </div>
+          <div class="cards__item">
+            <div class="cards__name lt46">Mga Daluyan ng Dugo</div>
+            <ul>
+              <li class="lt47">Pagkanipis ng mga pader ng mga daluyan ng dugo at arterya</li>
+              <li class="lt48">Aneurysm</li>
+              <li class="lt49">Atherosclerosis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cards__footer lt50">
+          Ang altapresyon ay maaaring maging sanhi ng biglaang pagkamatay anumang sandali.
+          <mark> Magmadali at simulan ang tamang paggamot sa oras! </mark>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_help">
+    <div class="container">
+      <div class="help">
+        <div class="help__body">
+          <div class="section__title help__title lt51">
+            Ang Diacord - tinatanggal ang altapresyon
+
+          </div>
+          <div class="help__list">
+            <div class="help__item">
+              <span></span>
+              <p class="lt52">
+                Ibinabalik ang normal na presyon ng dugo nang walang biglaang pagtaas
+
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt53">Pinapabuti ang sirkulasyon ng dugo sa utak
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt54">
+                Pinapalakas ang mga pader ng mga daluyan ng dugo, binabawasan ang panganib ng atake sa puso at stroke
+
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt55">Ginagawang normal ang pagtibok ng puso
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt56">
+                Pinapababa ang antas ng asukal, kolesterol, at triglycerides sa dugo
+
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt57">Ginagawang normal ang mga epekto ng madalas na paglabas ng stress hormones
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt58">
+                Tinitiyak ang natural na antas ng carbon dioxide at oxygen sa dugo
+
+              </p>
+            </div>
+            <div class="help__item">
+              <span></span>
+              <p class="lt59">Kinokontrol ang mga hormone ng katawan</p>
+            </div>
+          </div>
+          <div class="help__product">
+            <img alt="" src="images/product.png" />
+          </div>
+          <a class="help__btn lt60 scrollto" href="#adc">Mag-order ng Diacord</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_sostav">
+    <div class="container">
+      <div class="sostav">
+        <div class="section__title sostav__title lt61">
+          Ganap na natural
+        </div>
+        <p style="
+              font-size: 1.2em;
+              max-width: 600px;
+              text-align: center;
+              margin: 0 auto;
+            ">
+          Ang bawat kapsula ay naglalaman ng natatanging kumbinasyon ng mga natural na sangkap, kabilang ang mga
+          bitamina,
+          mineral, at mga halamang katas, na espesyal na pinili para sa kanilang positibong epekto sa puso at mga
+          daluyan ng dugo.
+
+        </p>
+        <div class="sostav__body">
+          <div class="sostav__item">
+            <div class="sostav__item-head">
+              <div class="sostav__media"></div>
+              <div class="sostav__info">
+                <div class="sostav__name lt62">Astragalus extract:</div>
+                <div class="sostav__description lt63">
+                  Maaaring suportahan ng Astragalus ang immune system at may mga anti-inflammatory properties.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sostav__item">
+            <div class="sostav__item-head sostav__item-head_reverse">
+              <div class="sostav__media sostav__media_right"></div>
+              <div class="sostav__info">
+                <div class="sostav__name lt64">Artichoke extract:</div>
+                <div class="sostav__description lt65">
+                  Ang artichoke ay maaaring makatulong sa pag-regulate ng mga antas ng asukal sa dugo at may mga
+                  katangian ng antioxidant.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sostav__item">
+            <div class="sostav__item-head">
+              <div class="sostav__media"></div>
+              <div class="sostav__info">
+                <div class="sostav__name lt66">Galangal extract:</div>
+                <div class="sostav__description lt67">
+                  Maaaring makatulong ang galangal na mapabuti ang panunaw at may mga anti-inflammatory properties.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sostav__item">
+            <div class="sostav__item-head sostav__item-head_reverse">
+              <div class="sostav__media sostav__media_right"></div>
+              <div class="sostav__info">
+                <div class="sostav__name lt68">Gymnema extract:</div>
+                <div class="sostav__description lt69">
+                  Maaaring makatulong ang Gymnema na pamahalaan ang mga antas ng glucose sa dugo at magkaroon ng mga
+                  katangian ng
+                  antioxidant.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sostav__product">
+          <img alt="" src="images/product.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_plus">
+    <div class="container">
+      <div class="plus">
+        <div class="plus__body">
+          <div class="section__title plus__title lt74">Mga Bentahe ng Diacord</div>
+          <div class="plus__list">
+            <div class="plus__item lt75">
+              Pinapagaling ang buong katawan, pinayayaman ang dugo ng mga kapaki-pakinabang na sustansya
+
+            </div>
+            <div class="plus__item lt76">Pinapakalma ang central nervous system
+            </div>
+            <div class="plus__item lt77">
+              Pinapabuti ang paggana ng cardiovascular system
+
+            </div>
+            <div class="plus__item lt78">
+              Nagpapasigla ng pagdaloy ng dugo sa utak
+
+            </div>
+            <div class="plus__item lt79">
+              Tinitiyak ang ganap na pag-alis ng altapresyon
+            </div>
+          </div>
+        </div>
+        <div class="plus__human"><img alt="" src="images/human.png" /></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_effect">
+    <div class="container">
+      <div class="effect">
+        <div class="section__title effect__title lt80">
+          Klinikal na napatunayang bisa
+        </div>
+        <div class="effect__description lt81">
+          Ang pananaliksik ay isinagawa ng Institute of Cardiovascular Diseases noong taong 2024. Ang 1634 na boluntaryo
+          na may
+          iba't ibang antas ng altapresyon ay uminom ng Diacord sa loob ng isang buwan.
+        </div>
+        <div class="effect__subtitle lt82">
+          Sa pagtatapos ng mga pagsubok, ang mga sumusunod na data ay nakuha:
+        </div>
+        <div class="effect__list">
+          <div class="effect__item">
+            <span class="lt83">96%</span><span class="lt84">Pinapagaling ang buong katawan, pinayayaman ang dugo ng mga
+              kapaki-pakinabang na sustansya
+            </span>
+          </div>
+          <div class="effect__item">
+            <span class="lt85">92%</span><span class="lt86">Pinapataas ang elastisidad ng mga daluyan ng dugo at
+              sinisira ang mga pamumuo ng dugo</span>
+          </div>
+          <div class="effect__item">
+            <span class="lt87">90%</span><span class="lt88">Walang sintomas ng altapresyon sa loob ng 6 na buwan
+              pagkatapos ng pagtatapos ng kurso
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_professional">
+    <div class="container">
+      <div class="professional">
+        <div class="section__title professional__title lt89">
+          Ano ang sinasabi ng mga doktor?
+        </div>
+        <div class="professional__body">
+          <div class="professional__info">
+            <p class="lt90">
+              Ang isa sa bawat limang tao ay nagdurusa mula sa mataas na presyon ng dugo, at pagkatapos ng edad na
+              limampu, halos
+              kalahati ng mga tao ang apektado. Ito ay isang napakapanganib na kalagayan na maaaring humantong sa hindi
+              maibabalik na
+              mga kahihinatnan anumang oras – maging sanhi ng kapansanan o kahit ng pagkamatay. Sa kabila nito, madalas
+              hindi alam ng
+              mga tao ang tungkol sa sakit na ito, hindi nauunawaan ang kalubhaan nito, o hindi tama ang paraan ng
+              kanilang paggamot.
+              Kaya’t mayroong nakakabahalang istatistika ng mga pagkamatay mula sa cardiovascular diseases sa buong
+              mundo – halos 40
+              porsyento ng lahat ng pagkamatay.
+            </p>
+            <p class="lt91">
+              Ang problema ng karamihan sa mga gamot ay pansamantala lamang nilang pinapababa ang presyon ng dugo, na
+              tinutugunan
+              lamang ang mga sintomas. Ang Diacord ay direktang nakakaapekto sa ugat ng sakit, nililinis ang mga pader
+              ng mga daluyan
+              ng dugo mula sa mga cholesterol plaque, pinapanipis ang dugo, pinalalakas ang mga daluyan, at ginagawa
+              silang mas
+              elastiko.
+
+            </p>
+            <p class="lt92">
+              Ang Diacord ay banayad na nagpapababa ng presyon ng dugo, hindi nakaka-addict, at walang mga side effect.
+              Ito lamang ang
+              tanging gamot na maaaring tuluyang magpawala ng altapresyon.
+            </p>
+          </div>
+        </div>
+        <div class="professional__footer">
+          <div class="professional__name lt93">Dr. Juan Dela Cruz,</div>
+          <div class="professional__job lt94">
+            Cardiologist, <span> Kandidato ng Medisina </span>
+          </div>
+          <div class="professional__id">
+            <img alt="" src="images/id.png" />
+          </div>
+        </div>
+        <div class="professional__human">
+          <img alt="" src="images/human_1.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section_commits">
+    <div class="container">
+      <div class="commits">
+        <div class="section__title commits__title lt95">
+          Mga Review ng Diacord
+        </div>
+        <div class="commits__box owl-carousel js-commits__box">
+          <div class="commits__item">
+            <div class="commits__face">
+              <img alt="" src="images/img-1.jpg" />
+            </div>
+            <div class="commits__name lt96">
+              Maria Lourdes <span> 58 TAONG GULANG </span>
+            </div>
+            <div class="commits__description lt97">
+              Matagal na akong nagdurusa mula sa mataas na presyon ng dugo, higit sa 12 taon, at napilitan akong uminom
+              ng
+              antihypertensive na gamot araw-araw. Sa paglipas ng panahon, napansin kong sumasakit na ang aking puso.
+              Nagkaroon ako ng
+              arrhythmia, at minsan pakiramdam ko'y parang tumitigil ang aking puso. Kumonsulta ako sa doktor, at
+              ipinaliwanag niya na
+              ito ay karaniwang side effect ng maraming vasodilator at inireseta niya sa akin ang Diacord. Bumili ako ng
+              ilang pakete
+              para sa buong kurso at sinimulan kong inumin ito. Anim na buwan na ang nakalipas, normal pa rin ang
+              presyon ko, at hindi
+              ko na naaalala ang mga bundok ng tabletas.
+            </div>
+            <div class="commits__star">
+              <img alt="" src="images/star.png" />
+            </div>
+          </div>
+          <div class="commits__item">
+            <div class="commits__face">
+              <img alt="" src="images/img-2.jpg" />
+            </div>
+            <div class="commits__name lt98">
+              Jose Manuel <span> 63 TAONG GULANG </span>
+            </div>
+            <div class="commits__description lt99">
+              Maituturing ko ang sarili ko bilang isang matagal nang hypertensive. Sa dami ng sinubukan kong mga paraan
+              ng paggamot sa
+              loob ng maraming taon, ang laman ng aking home pharmacy ay lumaki nang mabilis. Ngunit anuman ang aking
+              subukan, maaga o
+              huli ay nagkakaroon ako ng pagkasanay sa mga gamot, kaya palagi akong nagpapalit-palit ng iba't ibang
+              pamamaraan at
+              naghahanap ng bago. Hanggang sa natagpuan ko ang "Diacord." Kumonsulta ako sa kaibigan kong cardiologist,
+              at sinabi niya
+              na ito ay isang mahusay na lunas na magpapalimot sa akin ng altapresyon magpakailanman. At hindi siya
+              nagkamali!
+              Pagkatapos kong uminom ng Diacord, wala na akong naranasang kahit isang atake.
+            </div>
+            <div class="commits__star">
+              <img alt="" src="images/star.png" />
+            </div>
+          </div>
+          <div class="commits__item">
+            <div class="commits__face">
+              <img alt="" src="images/img-3.jpg" />
+            </div>
+            <div class="commits__name lt100">
+              Ana Maria <span> 49 TAONG GULANG
+              </span>
+            </div>
+            <div class="commits__description lt101">
+              Ang aking presyon ng dugo ay tumataas at bumababa nang ilang beses sa isang araw. Alam ko na ang
+              problemang ito sa loob
+              ng higit isang taon at kahit papaano natutunan ko nang harapin ito. Sinubukan ko ang iba't ibang mga
+              paraan: Binago ko
+              ang aking diyeta – walang maalat at maanghang, hindi umiinom ng kape; sinubukan kong hindi masyadong
+              mag-alala, at
+              uminom ng maraming gamot. Ngunit wala ni isa ang malapit na nakatulong. Ganito na ang sitwasyon hanggang
+              sa nakuha ko
+              ang Diacord. Hindi pa ako nakaramdam ng ganitong gaan mula nang gamitin ko ang produktong ito. Nagsimula
+              akong makatulog
+              at magising nang madali, nakalimutan ko ang kahinaan, pagkahilo, at pananakit ng ulo. Ang pinakamasarap na
+              bahagi – ito
+              ay may pangmatagalang epekto.
+            </div>
+            <div class="commits__star">
+              <img alt="" src="images/star.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section_face">
+    <div class="container">
+      <div class="face">
+        <div class="face__logo">
+          DIACORD
+        </div>
+        <div class="face__body">
+          <div class="face__box face__box_first">
+            <div class="section__title face__title lt0">
+              Lumalaban sa altapresyon at nagpapahaba ng buhay
+
+              Ibinabalik ang elastisidad ng mga daluyan ng dugo
+            </div>
+            <div class="face__list">
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt1">Ibinabalik ang elastisidad ng mga daluyan ng dugo
+                </p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt2">Pinapababa ang antas ng stress hormone
+                </p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt3">Pinipigilan ang mga atake sa puso at stroke
+                </p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt4">Nililinis ang mga dingding ng daluyan ng dugo mula sa kolesterol
+                </p>
+              </div>
+              <div class="face__item">
+                <div class="face__media"></div>
+                <p class="lt5">
+                  Hindi nagdudulot ng biglaang pagbabago sa presyon ng dugo
+                </p>
+              </div>
+            </div>
+
+            <div class="face__product">
+              <img alt="" src="images/product.png" />
+            </div>
+          </div>
+          <div class="face__box">
+            <img class="product" alt="" src="images/product.png" />
+            <form class="form order_form" method="POST" action="<?php echo $action; ?>">
+              <input type="hidden" name="subid5" value="back_vsl_form">
+              <input type="hidden" name="click_id" value="<?php echo $clickid; ?>" />
+              <div class="form__title lt6">Mag-order ng Diacord ngayon</div>
+              <div class="form__price">
+                <div class="form__price-old lt7 price_old">
+                  <x-oldprice> 3980 ₱</x-oldprice>
+                </div>
+                <div class="form__price-new lt8 price_main">
+                  <x-newprice>1990 ₱</x-newprice>
+                </div>
+              </div>
+              <div class="form__body">
+                <label class="form__label"><input class="form__field" type="text" name="name" minlength="2"
+                    required /><span class="lt10">Pangalan</span></label><label class="form__label"><input
+                    class="form__field" type="tel" name="phone" minlength="8" maxlength="16" required /><span
+                    class="lt10">Numero ng telepono</span></label>
+              </div>
+              <div class="form__time">
+                <div class="form__time-title lt12">Hanggang sa pagtatapos ng promo:</div>
+                <div class="form__time-box">
+                  <div class="form__time-count">
+                    <span>1</span><span class="lt13">oras</span>
+                  </div>
+                  <span class="lt14">:</span>
+                  <div class="form__time-count">
+                    <span>00</span><span class="lt15">minuto </span>
+                  </div>
+                  <span class="lt16">:</span>
+                  <div class="form__time-count">
+                    <span>00</span><span class="lt17">segundo </span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="form__btn lt18">
+                Umorder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <center>
+      <p>Copyright © 2025 ng Copyrightindex.com</p>
+      <p>
+        Nakalaan ang lahat ng karapatan. Maaaring hindi kopyahin, ipamahagi o ipadala sa anumang anyo o sa anumang
+        paraan,
+        kabilang ang pagpaparami, pagre-record o iba pang elektronik o mekanikal na paraan nang walang nakasulat na
+        pahintulot
+        ng publisher. Maliban kung ang mga maikling sanggunian ay ginawa sa mga kritikal na pagsusuri at iba pang
+        di-komersyal
+        na paggamit ay pinahihintulutan ng batas sa copyright.
+
+      </p>
+
+    </center>
+  </footer>
+
+
+
+  <style></style>
+
+
+  <script>
+    (function ($) {
+      $('.accordion > li:eq(0) .accordion_link')
+        .addClass('active')
+        .next()
+        .slideDown();
+
+      $('.accordion .accordion_link').click(function (j) {
+        var dropDown = $(this).closest('li').find('p');
+
+        $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active');
+        } else {
+          $(this)
+            .closest('.accordion')
+            .find('.accordion_link.active')
+            .removeClass('active');
+          $(this).addClass('active');
+        }
+
+        dropDown.stop(false, true).slideToggle();
+
+        j.preventDefault();
+      });
+    })(jQuery);
+  </script>
+  <script src="js/plugin.js"></script>
+  <script src="js/index.js"></script>
+
+  <script>
+    $('.scrollto').on('click', function (event) {
+      event.preventDefault();
+
+      var id = $(this).attr('href'),
+        top = $(id).offset().top;
+
+      $('body,html').animate(
+        {
+          scrollTop: top,
+        },
+        800
+      );
+    });
+  </script>
+</body>
+
+</html>

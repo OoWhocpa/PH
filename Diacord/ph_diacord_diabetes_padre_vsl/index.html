@@ -1,0 +1,140 @@
+<?php include("../q.php"); ?>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>17 araw — at bumalik sa normal ang iyong blood sugar!
+    Lihim na reseta mula sa isang paring Pilipino!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="./images/product.png" type="image/x-icon">
+  <script src="./js/back.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.vitBack(window.location.href, true);
+    });
+  </script>
+</head>
+
+<body>
+
+  <h1 class="main_title accent_form">
+    17 araw — at bumalik sa normal ang iyong blood sugar!
+    <span class="highlight">
+      Lihim na reseta mula sa isang paring Pilipino!</span>
+  </h1>
+  <div id="container_video">
+    <div id="play" onclick="playVideo()">
+      <div>
+        <h4>Nagsimula na ang video</h4>
+        <h4>Pindutin para makinig!</h4>
+      </div>
+    </div>
+    <div class="spinner-container">
+      <div class="spinner-sub-container">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <video id="video" autoplay="autoplay" muted="" playsinline="" webkit-playsinline="" poster="./images/poster.png">
+      <source src="https://pub-e23e91439aab49b998f4f59314f785fe.r2.dev/13xi/FJ54.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div id="progress-container" style="width: 100%; background-color: white; height: 10px; margin-top: 10px;">
+    <div id="progress-bar" style="width: 0%; height: 100%; background-color: red;"></div>
+  </div>
+
+  <p class="sound accent_form"><img height="20" src="./images/sound.png" alt=""> (Siguraduhing naka-on ang tunog.
+    Maaaring umabot ng 10 segundo bago mag-load ang video na ito.)</p>
+  <div id="order">
+    <div class="terbatas">
+      <p class="accent_form">Magmadali, limitadong alok!</p>
+      <img src="./images/BlPE.gif" alt="">
+    </div>
+    <div class="diet-section">
+      <form class="diet-container" action="<?php getRoutelink(); ?>" method="post">
+
+        <img src="./images/product.png" class="product" alt="">
+        <h2 class="form_title">MATATAPOS NA! Only <del>3980 ₱</del> <span class="green-text">1990 ₱</span>
+        </h2>
+        <a class="main-btn">
+          Kumuha ng 50% na diskwento
+
+          <span>Oo, gusto kong mawala na ang altapresyon ko!</span>
+          <img src="./images/small-days.png" alt="">
+        </a>
+        <div class="clearfix hide">
+          <input type="hidden" name="subid5" value="main_vsl_form">
+          <input type="hidden" id="clickId" name="click_id" value="<?php print $_SESSION['binom_click_id']; ?>">
+          <span class="label">Ilagay ang iyong pangalan: </span>
+
+          <input name="name" type="text" required minlength="2" placeholder="Ilagay ang iyong pangalan" class="input">
+
+          <span class="label">Ilagay ang iyong numero ng telepono </span>
+          <input name="phone" type="tel" required minlength="8" maxlength="16"
+            placeholder="Ilagay ang iyong numero ng telepono" class="input">
+
+          <button type="submit" class="btn_form">
+            Order na!
+          </button>
+        </div>
+        <div class="diet-text">
+          <h5>AVAILABLE SA BUONG PILIPINAS</h5>
+          <div class="box-img">
+            <div class="box">
+              <img src="./images/1.png" alt="">
+            </div>
+            <div class="box">
+
+              <img src="./images/2.png" alt="">
+            </div>
+            <div class="box">
+
+              <img src="./images/3.png" alt="">
+            </div>
+            <div class="box">
+              <img src="./images/4.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="main_text accent_form">
+    <h2>Banal na Reseta Laban sa Diyabetis</h2>
+    <p><b>Ang rebelasyon ng isang paring Pilipino: ang landas ng paglilinis ng katawan at kaluluwa</b></p>
+    <p>Ang diyabetis ay hindi lang tungkol sa asukal sa dugo.</p>
+    <p>Hindi lang ito tungkol sa lapay, o tungkol sa iniksyon at tableta.</p>
+    <p>Ito ay ang sigaw ng katawan na nawalan ng balanse.</p>
+    <p>Isang apoy sa loob — na sinindihan ng stress, pagod, at sakit na matagal nating binalewala.</p>
+    <p>Sabi ni Padre Ernesto, isang pari mula sa isang monasteryo sa kabundukan ng Bukidnon:</p>
+
+<blockquote><em>“Ang tunay na kagalingan ay hindi nagsisimula sa insulin.
+    Nagsisimula ito sa pagkaunawa ng sanhi.
+    At sa isang banayad na paglilinis na nagbabalik ng liwanag, lakas, at pag-asa sa katawan.”</em></blockquote>
+    <p> Sa mga nakaraang buwan, libu-libong Pilipino ang sumubok sa landas na ito:</p>  
+    <ul>
+      <li>✔️ ang asukal sa dugo ay naging normal — kahit walang iniksyon</li>
+      <li>✔️ nawala ang hilo at matinding pagkapagod</li>
+      <li>✔️ bumuti ang tulog, bumaba ang pamamaga</li>
+      <li>✔️ at muling naramdaman ang sigla — wala nang takot at sakit</li>
+    </ul>
+    <p><b>Sa unang pagkakataon sa loob ng 500 taon, ang lihim na pormulang monastiko ay ibinabahagi sa mga tao:</b></p>
+    <ul>
+      <li>– Bakit unti-unting nawawala ang bisa ng insulin?</li>
+      <li>– Ano talaga ang unti-unting sumisira sa lapay?</li>
+      <li>– Bakit kontrol lang ang ginagawa ng botika, pero hindi paggaling?</li>
+      <li>– At paano muling gisingin ang “panloob na liwanag” na nagpapasimula ng pagbawi?</li>
+    </ul>
+    <p><b>Ang iyong katawan ay isang templo. At ang bawat templo ay nangangailangan ng buhay.</b></p>
+    <p><b>Panoorin ang panayam. <br>
+      Pakinggan ang tinig ng pananampalataya. <br>
+      At alalahanin kung ano ang pakiramdam ng mamuhay nang walang diyabetis.
+    </b></p>
+  </div>
+
+  <script src="./js/video.js"></script>
+</body>
+
+</html>
