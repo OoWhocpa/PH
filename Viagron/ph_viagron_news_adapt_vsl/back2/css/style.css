@@ -1,0 +1,422 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: #f00;
+  --color-2: rgb(161, 0, 0);
+  --color-3: #a80000;
+  --color-4: #6d0000;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: #333;
+	padding: 0 12px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrp {
+	max-width: 480px;
+	overflow-x: hidden;
+	background: #111;
+	color: #fff;
+	text-align: center;
+	background-image: url("../img/background_dark.png");
+	background-color: #000;
+	margin: 15px auto;
+	border: 1px solid var(--color-1);
+	border-radius: 20px;
+	padding: 15px;
+	box-shadow: 0px 1px 13px var(--color-1);
+}
+
+
+.product-main-section {
+  margin: 60px 0 30px auto;
+}
+
+.product-head-descr {
+  margin: 25px;
+  font-style: italic;
+  line-height: 24px;
+}
+
+.animation {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid var(--color-4);
+}
+
+
+.product-img-wrp {
+  position: relative;
+  max-width: 291px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.product-descr-head {
+  line-height: 36px;
+}
+
+.product-descr ul {
+	text-align: left;
+  counter-reset: li;
+  list-style: none;
+}
+
+.rounded {
+  counter-reset: li;
+  list-style: none;
+  font-size: 14px;
+  margin: 25px 10px;
+}
+
+.product-descr ul li {
+	margin: 10px 0 0 40px;
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 3px solid #CADFCF;
+  padding: 0.6em;
+  border-radius: 4px;
+  background: #FEFEFE;
+  color: #231F20;
+}
+
+.rounded a {
+  position: relative;
+  display: block;
+  padding: 10px inherit;
+  margin: 20px 0 0 20px;
+  background: linear-gradient(90deg,#ffffff7a,#fff0);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all .3s ease-out;
+  text-align: left;
+  padding: .4em .4em .4em 2em;
+  font-size: 18px;
+}
+
+.rounded a::before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: var(--color-1);
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: .3em solid white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all .3s ease-out;
+}
+
+
+
+
+
+
+.product-star {
+  background: url('../img/star_discont.png') no-repeat;
+  background-size: contain;
+  display: block;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  right: -7px;
+  color: #fff;
+  top: 0px;
+  font-size: 35px;
+  line-height: 118px;
+  animation: spinAround 10s linear infinite;
+  filter: drop-shadow(0 0 4.75px crimson);
+}
+
+.product-discont {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  top: 24px;
+  font-size: 20px;
+  text-shadow: 0px 2px 1px #111;
+  font-weight: 600;
+}
+
+.cost-descr {
+  margin: 20px;
+  font-size: 22px;
+}
+
+.old-cost {
+  font-size: 22px;
+  color: #8c8c8c;
+  font-weight: bold;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+.cost {
+  font-size: 28px;
+  color: #5eff08;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.product-main-form input {
+  display: block;
+  height: 50px;
+  max-width: 320px;
+  padding: 10px;
+  font-size: 18px;
+  margin: 25px auto;
+  width: 100%;
+  outline: 1px solid var(--color-1);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 2px 20px var(--color-2);
+}
+
+.product-main-form input:focus {
+  outline: 1px solid var(--color-1);
+  box-shadow: 0px 2px 25px var(--color-1);
+}
+
+
+
+
+
+@keyframes ripple {
+20% {     
+    opacity: 0;     
+    transform: scale(2.5);
+  }
+100% {     
+    opacity: 0;     
+    transform: scale(2.5);
+  }
+}
+
+@keyframes spinAround {
+  0% {
+      transform: rotate(359deg)
+  }
+
+  to {
+      transform: rotate(0deg)
+  }
+}
+
+
+
+.form-btn {
+	color: #ffffff !important;
+	background: linear-gradient(var(--color-2), #000);
+	border-radius: 30px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 260px;
+	height: 55px;
+	padding: 0;
+	text-align: center;
+	font-size: 16px;
+	line-height: 50px;
+	position: relative;
+	margin: 40px auto 30px auto;
+	overflow: hidden;
+	font-weight: bold;
+	transition: background 0.3s cubic-bezier(0,1.12,.23,1.25);
+	box-shadow: 2px 7px 20px var(--color-2);
+	border: none;
+	cursor: pointer;
+}
+
+.form-btn:hover {
+  background: var(--color-3);
+}
+
+.form-btn:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 200px;
+  width: 250px;
+  top: -20px;
+  left: -140px;
+  background: rgba(255, 255, 255, 1.0);
+  border-radius: 100%;
+  transform: scale(0);
+  z-index: 20;
+  animation: ripple 3s linear infinite;
+}
+
+
+
+hr {
+  content: "";
+  display: block;
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,var(--color-1) 50%,rgba(255, 255, 255, 0) 100%);
+  margin: 15px 0;
+}
+
+
+
+/**/
+
+.mg20 {
+  margin: 20px 0;
+}
+
+.mg30 {
+  margin: 30px 0;
+}
+
+.in-color {
+  color: var(--color-1);
+}
+
+/**/
+
+
+
+.post-msg {
+  line-height: 28px;
+}
+
+.footer {
+	margin-top: 50px;
+}
+
+
+
+
+/* *** Styles for Countdown *** */
+
+@keyframes spinAround {
+  0% {
+      transform: rotate(359deg)
+  }
+
+  to {
+      transform: rotate(0deg)
+  }
+}
+
+.offer-counter {
+  margin: 40px 0 60px 0;
+}
+
+.countdown-title {
+  color: #000;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+  font-weight: 400;
+}
+
+.countdown-separator {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+  bottom: 5px;
+}
+
+.countdown {
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: 100;
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-number {
+  border-radius: 3px;
+  background: transparent;
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 1px 10px 1px var(--color-2);
+  border-radius: 50%;
+}
+
+.countdown-number::before {
+  content: '';
+  display: inline-block;
+  background: url('../img/line-countdown-red.png') no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.countdown-number.min::before {
+  animation: spinAround 20s linear infinite;
+}
+
+.countdown-number.sec::before {
+  animation: spinAround 7s linear infinite;
+}
+
+.countdown-time {
+  border-radius: 3px;
+  background: transparent;
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.countdown-text {
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.hide,
+.main-blk-additional {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
+
+#countdown.stop-time .countdown-number::before {
+  animation: none;
+}

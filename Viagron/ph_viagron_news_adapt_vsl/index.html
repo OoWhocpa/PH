@@ -1,0 +1,918 @@
+<?php include("../q.php"); ?>
+<!DOCTYPE html>
+<html lang="ph">
+
+<head>
+  <title>Pagbabalik ng lakas ng lalaki sa loob ng 7 araw: isang simpleng paraan sa bahay na gustong itago ng mga
+    kumpanyang
+    parmasyutiko!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="./images/product.png" type="image/x-icon">
+  <script src="./js/back.js"></script>
+  <script src="./js/date.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.vitBack(window.location.href, true);
+    });
+  </script>
+</head>
+
+<body>
+  <h3 class="dr_name">Dr. Rafael Santos</h3>
+  <h1 class="main_title">
+    <span class="highlight">Pagbabalik ng lakas ng lalaki sa loob ng 7 araw:</span> <br> isang simpleng paraan sa bahay
+    na gustong itago ng mga kumpanyang parmasyutiko!
+  </h1>
+  <div id="container_video">
+    <div id="play" onclick="playVideo()">
+      <div>
+        <h4>Nagsimula na ang video.</h4>
+        <h4>I-click para makinig!</h4>
+      </div>
+    </div>
+    <div class="spinner-container">
+      <div class="spinner-sub-container">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <video id="video" autoplay="autoplay" muted="" playsinline="" webkit-playsinline="" poster="./images/poster.png">
+      <source src="https://pub-bbcd86335e924092a9d274baed5a5a09.r2.dev/22no/0813.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div id="progress-container" style="width: 100%; background-color: #eee; height: 10px; margin-top: 20px;">
+    <div id="progress-bar" style="width: 0%; height: 100%; background-color: #008080;"></div>
+  </div>
+  <p class="sound"><img height="20" src="./images/sound.png" alt=""> (Siguraduhing naka-on ang tunog.
+    Maaaring umabot ng 10 segundo bago mag-load ang video na ito.)</p>
+
+  <div id="order">
+    <div class="terbatas">
+      <p class="accent_form">Magmadali, limitadong alok!</p>
+      <img src="./images/BlPE.gif" alt="">
+    </div>
+    <div class="diet-section">
+      <form class="diet-container" action="<?php getRoutelink(); ?>" method="post">
+
+        <img src="./images/product.png" class="product" alt="">
+        <h2 class="form_title">MATATAPOS NA! Only <del>3980 ₱</del> <span class="green-text">1990 ₱</span>
+        </h2>
+        <a class="main-btn">
+          Kumuha ng 50% na diskwento
+
+          <span>Oo! Gusto ko ng matibay na potensya!</span>
+          <img src="./images/small-days.png" alt="">
+        </a>
+        <div class="clearfix hide">
+          <input type="hidden" name="subid5" value="main_vsl_form">
+          <input type="hidden" id="clickId" name="click_id" value="<?php print $_SESSION['binom_click_id']; ?>">
+          <span class="label">Ilagay ang iyong pangalan: </span>
+
+          <input name="name" type="text" required minlength="2" placeholder="Ilagay ang iyong pangalan" class="input">
+
+          <span class="label">Ilagay ang iyong numero ng telepono </span>
+          <input name="phone" type="tel" required minlength="8" maxlength="16"
+            placeholder="Ilagay ang iyong numero ng telepono" class="input">
+
+          <button type="submit" class="btn_form">
+            Order na!
+          </button>
+        </div>
+        <div class="diet-text">
+          <h5>AVAILABLE SA BUONG PILIPINAS</h5>
+          <div class="box-img">
+            <div class="box">
+              <img src="./images/1.png" alt="">
+            </div>
+            <div class="box">
+
+              <img src="./images/2.png" alt="">
+            </div>
+            <div class="box">
+
+              <img src="./images/3.png" alt="">
+            </div>
+            <div class="box">
+              <img src="./images/4.png" alt="">
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <div class="block_tv">
+    <p>GAYA NG IPINAKIKITA SA</p>
+    <div class="tv_icons">
+      <img src="./images/img1.png" alt="" />
+      <img src="./images/img2.png" alt="" />
+      <img src="./images/img3.png" alt="" />
+    </div>
+  </div>
+
+  <div class="comments" id="comment-component-text">
+    <div id="comment_num" class="">TALAKAYAN:</div>
+
+
+
+
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Carlos</h2>
+        <div class="comment__text">
+          Napaka-informatibo! Matagal ko nang hinahanap ang natural na paraan para maibalik ang lakas at tibay ko, at
+          sinagot ng
+          video na ito ang lahat ng tanong ko.
+
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">12</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/2.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Jun</h2>
+        <div class="comment__text">
+          Bawat lalaki ay dapat mapanood ang video na ito! Hindi ko akalaing posible ang ganitong resulta nang walang
+          gamot o
+          operasyon.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">15</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/3.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Ramon</h2>
+        <div class="comment__text">
+          Salamat sa napaka-kapaki-pakinabang na video na ito! Handa na akong kumilos ngayon din para ibalik ang
+          kumpiyansa ko sa
+          kama.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">13</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Alfredo</h2>
+        <div class="comment__text">
+          Dati akong may pagdududa, pero napahanga ako sa mga kwento ng ibang lalaki. Tunay na pambihira ang video na
+          ito.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">5</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/5.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Mario</h2>
+        <div class="comment__text">
+          Nakakagulat kung gaano karaming mahalagang impormasyon ang natutunan ko tungkol sa natural na pagpapalakas!
+          Kailangan ko
+          agad ipakita ito sa kaibigan ko.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">5</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/6.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Ernesto</h2>
+        <div class="comment__text">
+          Ito ang unang beses na narinig ko ang tungkol sa paraang ito. Tunay na kaligtasan ang video na ito para sa mga
+          nais
+          muling maging aktibo at malakas.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">5</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/7.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Benedicto</h2>
+        <div class="comment__text">
+          Salamat sa pagbabahagi ng katotohanang matagal nang itinatago sa atin. Ngayon, alam ko na kung ano talaga ang
+          kailangan
+          ko para maging buo muli ang aking lakas bilang lalaki. <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">10</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/8.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Jorge</h2>
+        <div class="comment__text">
+          Ngayon ko lang naintindihan kung bakit hindi gumagana sa akin ang mga karaniwang tableta. Binago ng video na
+          ito ang
+          pananaw ko sa kalusugang pangkalalakihan.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">12</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/9.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Victor</h2>
+        <div class="comment__text">
+          Napakahalagang impormasyon! Ngayon ay kumpiyansa na akong makakamit ang resulta nang hindi gumagastos nang
+          malaki.
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/10.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Luis</h2>
+        <div class="comment__text">
+          Matapos kong mapanood ang video na ito, napagtanto kong maling umasa ako sa mga mamahaling gamot. Ang natural
+          na paraan
+          ang tunay na solusyon!
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Ricardo</h2>
+        <div class="comment__text">
+          Binago ng <span class="link">Viagron</span> ang buhay ko! Bumalik ang tigas at tibay ko pagkatapos lang ng isang linggo ng paggamit.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/12.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Jose</h2>
+        <div class="comment__text">
+          Nakakagawa ng himala ang mga kapsulang ito! Isang buwan ko nang iniinom ang <span class="link">Viagron</span>  at parang 20 taon ang
+          nawala sa
+          kahinaan ko.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">6</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/13.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Manuel</h2>
+        <div class="comment__text">
+          Ang dami ko nang nasubukang produkto, pero wala pa ring tumalo sa <span class="link">Viagron</span> . Nawala ang problema ko sa ereksyon
+          at bumalik
+          ang sigla ko.
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">6</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/14.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Antonio</h2>
+        <div class="comment__text">
+          Ibinalik ng <span class="link">Viagron</span>  ang kumpiyansa ko bilang lalaki! Kitang-kita agad ang resulta pagkatapos lang ng ilang
+          beses na
+          paggamit. Sobrang saya ko!
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Fernando</h2>
+        <div class="comment__text">
+          Napakagandang produkto! Mas matibay at mas matagal na akong tumagal sa kama, at pati asawa ko nagtatanong kung
+          anong
+          sikreto ko.
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">17</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/16.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Rogelio</h2>
+        <div class="comment__text">
+          <span class="link">Viagron</span>  ang pinakamahusay na nasubukan ko. Mas tumibay ang performance ko at wala na ang dating panghihina.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">10</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/17.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Edgardo</h2>
+        <div class="comment__text">
+          Uminom ang kaibigan ko ng <span class="link">Viagron</span>  at talagang kahanga-hanga ang resulta. Kaya sinubukan ko rin at sa loob ng
+          maikling
+          panahon, nagbago ang lahat.
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">12</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/18.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Andres</h2>
+        <div class="comment__text">
+          Tunay na kayamanan ang kapsulang ito. Mas malakas ako at mas handa – parang bumalik ako sa kasibulan ng
+          kabataan!
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">12</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/19.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Hector</h2>
+        <div class="comment__text">
+          Hindi ko inakala na magiging ganito kaepektibo ang isang kapsula! Parang mahika ang <span class="link">Viagron</span> .
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">14</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/20.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Domingo</h2>
+        <div class="comment__text">
+          Pagkatapos kong gumamit ng <span class="link">Viagron</span> , hindi ko na halos makilala ang sarili ko sa kama. Nawala ang problema sa
+          pagtayo at
+          mas energized ako.
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Arturo</h2>
+        <div class="comment__text">
+          Pinatibay talaga ng kapsulang ito ang katawan at performance ko! Mas ganado at matagal, at parang bumata ako
+          ng 15 taon.
+          Gustong-gusto ko itong gamitin kahit walang ibang pampalakas.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Miguel</h2>
+        <div class="comment__text">
+          Sobrang gusto ko talaga ito! Mas matibay na ako at halos wala nang aberya sa ereksyon. Ang dami kong natanggap
+          na papuri
+          mula sa partner ko. Salamat sa pinakamahusay na produkto!
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/1.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Emilio</h2>
+        <div class="comment__text">
+          Masaya ako sa resulta ng <span class="link">Viagron</span> . 60 na ako pero parang binata pa rin ako sa performance.
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="comment">
+      <img class="comment__image" src="./images/24.jpg" alt=" " />
+      <div class="comment__content">
+        <h2 class="comment__name">Benito</h2>
+        <div class="comment__text">
+          Matagal na akong hindi nagkakaroon ng ganitong lakas at tibay. Pati asawa ko napansin — sabi niya mas ganado
+          raw ako
+          lately. Kinansela ko agad ang pagbili ko ng ibang gamot!
+          <br />
+        </div>
+        <p class="comment__details">
+          <button class="comments__like">
+            <img src="./images/like-btn.svg" alt="" />
+            <span class="likes">16</span>
+            Gusto
+          </button>
+          <button class="comments__dislike">
+            <img src="./images/dislike-btn.svg" alt="" />
+            <span class="dislikes">0</span>
+            Ayaw
+          </button>
+          <a class="make-comment"><img src="./images/comment.svg" alt="" />Komento
+          </a>
+          <span class="comment__time">
+            <script>
+
+              dtime("ph", 0, 0, 0, true, true, true);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="literarure">
+    <div class="literarure-box">
+      <img src="./images/image3.png" alt="">
+      <img src="./images/image15.png" alt="">
+      <img src="./images/image22.png" alt="">
+    </div>
+    <ol>
+      <li><b>Kawashima, Y., & Wu, H. (2018). </b> Health benefits of brown rice: A review of scientific studies.
+        <em>Journal of Nutrition &
+          Food Sciences, 8(6), 687-694.</em>
+      </li>
+      <li><b>Zhao, L., et al. (2020)</b>The role of folate and vitamin B9 in the prevention of prostate cancer: Insights
+        from epidemiological studies. <em>Asian Journal of Urology, 7(3), 192-200.</em></li>
+      <li><b>Chen, Y., & Zhang, W. (2021).</b> Traditional Chinese medicine in the treatment of benign prostatic
+        hyperplasia: Mechanisms and clinical evidence. <em>Journal of Ethnopharmacology, 275, 114177.</em></li>
+      <li><a href="https://www.auanet.org/guidelines-and-quality/guidelines" target="_blank"><b>American Urological
+            Association. (2022).</b> <em>Clinical guidelines on the management of benign prostatic hyperplasia
+            (BPH).</em></a></li>
+      <li><a href="https://www.who.int/news-room/fact-sheets" target="_blank"><b>World Health Organization. (2021).</b>
+          <em>Prostate cancer prevention and control: Global health perspective. Fact Sheet.</em></a></li>
+      <li><b>Wang, X., et al. (2019)</b> Clinical efficacy of brown rice in patients with benign prostatic hyperplasia:
+        A randomized controlled trial <em>The Journal of Urology, 201(4), 753-759.</em></li>
+      <li><b>Zhang, W., & Chen, Z. (2020).</b> The impact of dietary habits on prostate health in Chinese men.
+        <em>Nutrition Research Reviews, 33(1), 1-13.</em>
+      </li>
+      <li><a href="https://www.nih.gov/health-information" target="_blank"><b>National Institutes of Health. (2022).</b>
+          <em>Folate (Vitamin B9) and its effects on men’s health.</em></a></li>
+      <li><b>Pfizer, Takeda, & Sanofi. (2022).</b> The challenges of prostate cancer drug development <em>Pharmaceutical
+          Industry Reports, 45(2), 123-130.</em></li>
+    </ol>
+  </div>
+  <footer>
+    <p>Copyright © 2025 ng Copyrightindex.com</p>
+
+    <p>Nakalaan ang lahat ng karapatan. Maaaring hindi kopyahin, ipamahagi o ipadala sa anumang anyo o sa anumang
+      paraan, kabilang ang pagpaparami, pagre-record o iba pang elektronik o mekanikal na paraan nang walang nakasulat
+      na pahintulot ng publisher. Maliban kung ang mga maikling sanggunian ay ginawa sa mga kritikal na pagsusuri at iba
+      pang di-komersyal na paggamit ay pinahihintulutan ng batas sa copyright.</p>
+  </footer>
+
+  <script src="./js/video.js"></script>
+  <script src="./js/coments.js"></script>
+</body>
+
+</html>

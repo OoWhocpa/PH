@@ -1,0 +1,114 @@
+<?php
+// Отримуємо значення clickid з URL
+$clickid = $_GET['clickid'] ?? '';
+
+// Встановлюємо параметр binom_click_id в значення clickid
+$action = "../../route.php?binom_click_id=" . urlencode($clickid);
+?>
+<!DOCTYPE html>
+<html lang="ph">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIAGRON</title>
+  <meta name="description" content="_________________">
+  <link rel="stylesheet" href="css/style.css?v=1.0.10">
+  <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+
+<body>
+  <div class="wrp">
+
+    <header class="product-header">
+      <h1 class="product-head">VIAGRON</h1>
+      <hr class="mg20">
+
+      <p class="product-head-descr">Potency <br> sa bagong antas! <br> 100% garantisado!</p>
+
+      <div class="animation-container">
+        <img class="animation" src="img/anim.gif" alt="" width="270" height="150">
+      </div>
+
+      <hr class="mg30">
+    </header>
+
+    <section class="product-descr">
+      <h2 class="product-descr-head">KAPAG BUMILI KA <br> <b class="in-color">VIAGRON,</b> <br> NAKUHA MO:</h2>
+      <ol class="rounded">
+        <li><a href="#order">Mas mahaba at mas malakas na erections sa anumang oras ng araw o gabi</a></li>
+        <li><a href="#order">100% kasiyahan garantisado</a></li>
+        <li><a href="#order">Mas matindi at kasiya-siyang pag-orgasmo</a></li>
+        <li><a href="#order">Sekswal na tibay x3 (ang tagal ng pakikipagtalik ay hanggang 3 oras!)</a></li>
+      </ol>
+    </section>
+
+
+
+    <div class="product-main-section">
+
+      <div class="product-img-wrp">
+        <span class="product-star">&nbsp;</span>
+        <span class="product-discont">-50%</span>
+        <img src="img/product-v2.png" alt="">
+      </div>
+
+
+      <p class="cost-descr">Presyo ng diskwento:</p>
+      <p class="old-cost">3980 ₱</p>
+      <p class="cost">1990 ₱</p>
+
+      <!-- ** Timer ** -->
+      <div class="offer-counter">
+        <div id="countdown" class="countdown d-none">
+
+          <div class="countdown-number hide">
+            <span class="days countdown-time"></span>
+            <!-- <span class="countdown-text">Days</span> -->
+          </div>
+          <div class="countdown-number hide">
+            <span class="hours countdown-time"></span>
+            <!-- <span class="countdown-text">Hours</span> -->
+          </div>
+          <div class="countdown-number min">
+            <span class="minutes countdown-time"></span>
+            <span class="countdown-text">Minuto</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-number sec">
+            <span class="seconds countdown-time"></span>
+            <span class="countdown-text">Segundo</span>
+          </div>
+
+        </div>
+      </div>
+
+      <form id="order" class="product-main-form" action="<?php echo $action; ?>" method="POST">
+        <input type="hidden" name="subid5" value="back_vsl_form">
+        <input type="hidden" name="click_id" value="<?php echo $clickid; ?>" />
+        <input class="name-input" placeholder="Pangalan" name="name" id="name" required type="text">
+        <input class="phone-input" id="phone-input" placeholder="Numero ng telepono" name="phone" minlength="8" 
+          maxlength="17" type="tel" required>
+
+        <button type="submit" class="form-btn">ORDER NA ANG VIAGRON</button>
+
+      </form>
+
+      <p class="post-msg">ANG EPEKTO NG PAGTATAAS NG POTENTITY <br> HINDI LANG IKAW ANG DARARAMDAMAN </p>
+
+    </div>
+
+
+    <footer class="footer">
+      <hr>
+      (c) VIAGRON 2025
+    </footer>
+
+
+  </div> <!-- / wrp -->
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
